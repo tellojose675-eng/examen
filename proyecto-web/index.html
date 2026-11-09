@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y de Codificación (T02) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechSolutions - Líderes en desarrollo de software a medida, computación en la nube, ciberseguridad y consultoría tecnológica empresarial.">
+  <meta name="keywords" content="TechSolutions, software a medida, cloud computing, ciberseguridad, consultoría IT, desarrollo web">
+  <meta name="author" content="TechSolutions Inc.">
+  
+  <title>TechSolutions | Innovación y Soluciones Tecnológicas</title>
+
+  <!-- Biblioteca de Íconos Font Awesome (T04) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Hoja de Estilos Externa Única (T01 - T10) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       CABECERA Y MENÚ DE NAVEGACIÓN (T05, T06: STICKY, T07: SEMÁNTICA)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Logotipo Institucional -->
+      <a href="index.html" class="brand-logo" aria-label="Página de inicio de TechSolutions">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+      </a>
+
+      <!-- Menú de Navegación Interactivo (T05) -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li>
+            <a href="index.html" class="active">
+              <i class="fa-solid fa-house"></i> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="nosotros.html">
+              <i class="fa-solid fa-users"></i> Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="contacto.html">
+              <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       BANNER PRINCIPAL / HERO SECTION (T01, T03, T06)
+       ====================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <p class="section-tag" style="color: #64ffda;">Transformación Digital Confiable</p>
+        <h1>Impulsamos el Éxito de su Negocio con Tecnología de Vanguardia</h1>
+        <p>
+          En <strong style="color: #ffffff;">TechSolutions</strong> transformamos desafíos complejos en oportunidades de crecimiento sostenible. Desarrollamos soluciones digitales robustas, seguras y escalables para empresas competitivas.
+        </p>
+        <div class="hero-actions">
+          <a href="contacto.html" class="btn btn-secondary">
+            <i class="fa-solid fa-paper-plane"></i> Solicitar Asesoría
+          </a>
+          <a href="nosotros.html" class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">
+            <i class="fa-solid fa-circle-info"></i> Conocer la Empresa
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL (T07: MAIN, SECTION, ARTICLE, ASIDE)
+       ====================================================================== -->
+  <main class="container">
+    
+    <!-- Demostración explícita de posicionamiento estático (T06) -->
+    <div class="pos-static-demo" style="margin-top: 2rem;">
+      <i class="fa-solid fa-circle-check" style="color: var(--color-primary); margin-right: 0.5rem;"></i>
+      <strong>Aviso de Sistema:</strong> Infraestructura operando con <span class="destacado">99.98% de disponibilidad garantizada</span> según normativas internacionales ISO/IEC 27001.
+    </div>
+
+    <div class="main-layout-grid">
+      
+      <!-- Columna Principal: Información y Servicios -->
+      <div class="content-area">
+        
+        <!-- Presentación Corporativa -->
+        <section class="section-header">
+          <span class="section-tag">Nuestras Capacidades</span>
+          <h2 class="section-title">Servicios Tecnológicos de Alto Nivel</h2>
+          <p class="text-justify">
+            Brindamos un portafolio integral diseñado para acompañar el ciclo de vida tecnológico de su organización. Implementamos metodologías ágiles y estándares de calidad para asegurar que <span class="destacado">cada inversión genere un impacto tangible y medible</span> en sus operaciones empresariales.
+          </p>
+        </section>
+
+        <!-- Cuadrícula de Servicios (Articles con CSS Grid, Border, Shadow, Absolute Badge) -->
+        <section class="services-grid" aria-label="Catálogo de servicios principales">
+          
+          <!-- Servicio 1 -->
+          <article class="service-card">
+            <!-- Posicionamiento ABSOLUTE (T06) -->
+            <span class="badge-absolute">Más Solicitado</span>
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Desarrollo de Software a Medida</h3>
+            <p>
+              Creación de plataformas web, aplicaciones empresariales y APIs resilientes construidas bajo requerimientos específicos y con código modular de alta fidelidad.
+            </p>
+            <a href="contacto.html" class="btn btn-outline" style="align-self: flex-start; padding: 0.45rem 1rem; font-size: 0.88rem;">
+              Consultar detalles <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="service-card">
+            <span class="badge-absolute" style="background-color: var(--color-secondary);">Cloud Ready</span>
+            <div class="service-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3>Cloud Computing &amp; DevOps</h3>
+            <p>
+              Migración, optimización y automatización de despliegues en nubes públicas y privadas (AWS, Azure, GCP) con máxima eficiencia de costos.
+            </p>
+            <a href="contacto.html" class="btn btn-outline" style="align-self: flex-start; padding: 0.45rem 1rem; font-size: 0.88rem;">
+              Consultar detalles <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Ciberseguridad Empresarial</h3>
+            <p>
+              Auditorías de vulnerabilidades, pruebas de penetración (pentesting) y blindaje integral de activos digitales corporativos bajo marcos NIST.
+            </p>
+            <a href="contacto.html" class="btn btn-outline" style="align-self: flex-start; padding: 0.45rem 1rem; font-size: 0.88rem;">
+              Consultar detalles <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Inteligencia de Datos e IA</h3>
+            <p>
+              Integración de analítica avanzada, modelos predictivos y automatización inteligente para optimizar la toma de decisiones estratégicas.
+            </p>
+            <a href="contacto.html" class="btn btn-outline" style="align-self: flex-start; padding: 0.45rem 1rem; font-size: 0.88rem;">
+              Consultar detalles <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+            </a>
+          </article>
+
+        </section>
+
+        <!-- ==================================================================
+             SECCIÓN MULTIMEDIA: VIDEO DE YOUTUBE (T07, T08: IFRAME)
+             ================================================================== -->
+        <section class="media-section" aria-label="Presentación audiovisual corporativa">
+          <span class="section-tag">Experiencia y Visión</span>
+          <h2 class="section-title">Descubra Nuestra Metodología de Innovación</h2>
+          <p>
+            Vea este video explicativo sobre cómo las tecnologías emergentes y el desarrollo orientado a buenas prácticas transforman la productividad moderna.
+          </p>
+          <div class="video-responsive-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/jfKfPfyJRdk" 
+              title="Video Institucional TechSolutions - Innovación y Desarrollo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ==================================================================
+           BARRA LATERAL INFORMATIVA (<aside>) - T06: STICKY, T07: SEMÁNTICA
+           ================================================================== -->
+      <aside class="sidebar sticky-sidebar" aria-label="Información complementaria y novedades">
+        
+        <!-- Widget 1: Horario de Atención -->
+        <div class="sidebar-widget">
+          <h3><i class="fa-regular fa-clock"></i> Horario de Atención</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 0.5rem;">
+            Nuestro equipo de soporte técnico y consultoría comercial se encuentra a su disposición:
+          </p>
+          <ul class="sidebar-news-list">
+            <li><strong>Lunes a Viernes:</strong> 08:30 - 18:30 hrs</li>
+            <li><strong>Sábados:</strong> 09:00 - 13:00 hrs</li>
+            <li><strong>Soporte Crítico 24/7:</strong> Para clientes con contrato SLA nivel Gold o Enterprise.</li>
+          </ul>
+        </div>
+
+        <!-- Widget 2: Boletín de Innovación y Noticias -->
+        <div class="sidebar-widget">
+          <h3><i class="fa-solid fa-newspaper"></i> Actualidad IT</h3>
+          <ul class="sidebar-news-list">
+            <li>
+              <a href="nosotros.html">
+                <i class="fa-solid fa-chevron-right" style="color: var(--color-secondary);"></i>
+                <span>Tendencias en Cloud Híbrido para el año fiscal 2026</span>
+              </a>
+            </li>
+            <li>
+              <a href="nosotros.html">
+                <i class="fa-solid fa-chevron-right" style="color: var(--color-secondary);"></i>
+                <span>Estrategias de blindaje contra Ransomware corporativo</span>
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html">
+                <i class="fa-solid fa-chevron-right" style="color: var(--color-secondary);"></i>
+                <span>Webinar gratuito: Automatización y Calidad Continua</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Widget 3: Llamado a la Acción Directo -->
+        <div class="sidebar-widget" style="background-color: var(--color-primary-light); border-color: rgba(15, 76, 129, 0.2);">
+          <h3 style="color: var(--color-primary); border-bottom-color: rgba(15, 76, 129, 0.2);">
+            <i class="fa-solid fa-handshake"></i> ¿Tiene un Proyecto?
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-heading);">
+            Obtenga un diagnóstico técnico preliminar y una estimación personalizada sin compromiso.
+          </p>
+          <a href="contacto.html" class="btn btn-primary" style="width: 100%; font-size: 0.9rem; padding: 0.6rem 1rem;">
+            Cotizar Proyecto
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (T06: POSITION FIXED)
+       ====================================================================== -->
+  <a 
+    href="https://wa.me/51999999999?text=Hola%20TechSolutions,%20deseo%20recibir%20información%20sobre%20sus%20servicios" 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    title="Chatear por WhatsApp con un especialista" 
+    aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA INSTITUCIONAL (T07: FOOTER, T05: ENLACES)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        
+        <!-- Columna 1: Perfil Corporativo -->
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 1rem;">
+            <i class="fa-solid fa-microchip" style="color: var(--color-secondary);"></i>
+            <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+          </div>
+          <p>
+            Firma especializada en ingeniería de software, arquitectura cloud y ciberseguridad. Convertimos tecnología en valor medible para organizaciones de vanguardia.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Sobre Nosotros</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Tarifas y Planes</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Formulario de Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios Destacados -->
+        <div class="footer-col">
+          <h3>Soluciones</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Desarrollo Web &amp; Apps</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Arquitectura Cloud</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Auditoría de Seguridad</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Consultoría DevOps</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto Institucional -->
+        <div class="footer-col">
+          <h3>Oficina Central</h3>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            Av. Tecnológica 1024, Edificio Innova, Lima - Perú
+          </p>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-phone" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            +51 (1) 745-8900
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            contacto@techsolutions.com
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Subpie de Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 TechSolutions S.A.C. Todos los derechos reservados.</p>
+        <p>Desarrollado bajo estándares W3C Semánticos y Diseño Adaptable (HTML5 &amp; CSS3).</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

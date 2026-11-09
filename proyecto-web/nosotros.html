@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y de Codificación (T02) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conozca a TechSolutions: Nuestra historia, misión, visión, valores corporativos y la metodología ágil con la que impulsamos la transformación tecnológica.">
+  <meta name="keywords" content="TechSolutions, nosotros, equipo tecnológico, historia empresarial, misión, visión, valores corporativos">
+  <meta name="author" content="TechSolutions Inc.">
+  
+  <title>TechSolutions | Sobre Nosotros - Historia, Misión y Valores</title>
+
+  <!-- Biblioteca de Íconos Font Awesome (T04) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Hoja de Estilos Externa Única (T01 - T10) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       CABECERA Y MENÚ DE NAVEGACIÓN (T05, T06: STICKY, T07: SEMÁNTICA)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Logotipo Institucional -->
+      <a href="index.html" class="brand-logo" aria-label="Página de inicio de TechSolutions">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+      </a>
+
+      <!-- Menú de Navegación Interactivo (T05) -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="nosotros.html" class="active">
+              <i class="fa-solid fa-users"></i> Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="contacto.html">
+              <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       ENCABEZADO DE SECCIÓN / BREADCRUMB HERO
+       ====================================================================== -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="section-tag">Identidad Corporativa</span>
+      <h1 class="section-title">Compromiso, Innovación y Excelencia Técnica</h1>
+      <p style="max-width: 800px; color: var(--color-text-muted); font-size: 1.1rem;">
+        Conozca la trayectoria, los principios éticos y el talentoso equipo multidisciplinario que hace posible el éxito tecnológico de nuestros clientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL (T07: MAIN, SECTION, ARTICLE)
+       ====================================================================== -->
+  <main class="container">
+
+    <!-- HISTORIA CORPORATIVA CON IMAGEN LOCAL (T03, T06: FILTER GRAYSCALE, T07) -->
+    <section class="about-intro-grid" aria-label="Historia de la compañía">
+      
+      <div class="about-text">
+        <span class="section-tag">Nuestra Trayectoria</span>
+        <h2>Más de una Década Creando Soluciones de Impacto</h2>
+        <p class="text-justify">
+          Fundada en 2014 por un colectivo de ingenieros de sistemas apasionados por el software libre y la computación distribuida, <strong style="color: var(--color-primary);">TechSolutions</strong> nació con una premisa clara: <span class="destacado">democratizar el acceso a tecnologías de clase mundial</span> para organizaciones de todos los sectores económicos.
+        </p>
+        <p class="text-justify">
+          A lo largo de los años, hemos consolidado alianzas estratégicas globales y desarrollado más de 250 proyectos exitosos en telecomunicaciones, banca, salud y comercio electrónico, consolidándonos como un socio tecnológico de referencia en la región andina y el mercado internacional.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <a href="contacto.html" class="btn btn-primary">
+            <i class="fa-solid fa-handshake"></i> Unirse a Nuestra Red de Clientes
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen institucional local con efecto grayscale a color en hover (T06) -->
+      <div class="image-wrapper pos-relative-box">
+        <img 
+          src="img/nosotros.jpg" 
+          alt="Equipo multidisciplinario de profesionales de TechSolutions en sesión de planificación técnica colaborativa" 
+          class="img-institucional"
+          loading="lazy">
+        <div class="image-caption">
+          <i class="fa-solid fa-award" style="color: var(--color-accent); margin-right: 0.3rem;"></i>
+          <strong>Equipo TechSolutions:</strong> Especialistas certificados en Scrum, AWS, Azure y Seguridad Ofensiva.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MISIÓN Y VISIÓN CORPORATIVA (T03, T07) -->
+    <section aria-label="Misión y Visión de TechSolutions">
+      <div class="mission-vision-grid">
+        
+        <!-- Misión -->
+        <article class="mv-card">
+          <h3>
+            <i class="fa-solid fa-compass" style="color: var(--color-primary);"></i>
+            Nuestra Misión
+          </h3>
+          <p class="text-justify">
+            Diseñar, construir e implementar ecosistemas tecnológicos confiables, eficientes e intuitivos que potencien la productividad de nuestros clientes, garantizando la <span class="destacado">máxima seguridad de la información</span> y un retorno de inversión sostenible mediante ingeniería de software de primer nivel.
+          </p>
+        </article>
+
+        <!-- Visión -->
+        <article class="mv-card">
+          <h3>
+            <i class="fa-solid fa-eye" style="color: var(--color-secondary);"></i>
+            Nuestra Visión
+          </h3>
+          <p class="text-justify">
+            Ser reconocidos para el 2030 como la compañía de consultoría tecnológica e innovación digital más confiable de América Latina, distinguiéndonos por nuestra <span class="destacado">agilidad operativa, ética profesional y compromiso inquebrantable</span> con la excelencia técnica.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- VALORES CORPORATIVOS MEDIANTE LISTA DESORDENADA (T05: <ul>) -->
+    <section style="margin: 3.5rem 0;" aria-label="Valores corporativos">
+      <div class="section-header">
+        <span class="section-tag">Cultura Organizacional</span>
+        <h2 class="section-title">Valores que Guían Nuestro Trabajo</h2>
+        <p>Los pilares fundamentales sobre los cuales construimos relaciones a largo plazo con clientes, socios y colaboradores:</p>
+      </div>
+
+      <!-- Lista Desordenada (<ul>) requerida por rúbrica (T05) -->
+      <ul class="values-list">
+        <li>
+          <i class="fa-solid fa-shield-cat"></i>
+          <div>
+            <h4 style="margin-bottom: 0.25rem;">Integridad y Transparencia</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Actuamos con honestidad absoluta en nuestras propuestas técnicas, presupuestos y compromisos de entrega.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-lightbulb"></i>
+          <div>
+            <h4 style="margin-bottom: 0.25rem;">Innovación Continua</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Investigamos y aplicamos proactivamente herramientas de última generación para mantener a nuestros clientes a la delantera.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-people-arrows"></i>
+          <div>
+            <h4 style="margin-bottom: 0.25rem;">Colaboración y Empatía</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Nos integramos estrechamente con el equipo interno del cliente para comprender a fondo sus necesidades reales.
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="fa-solid fa-gem"></i>
+          <div>
+            <h4 style="margin-bottom: 0.25rem;">Obsesión por la Calidad</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Cada línea de código y configuración de red pasa por rigurosas pruebas de rendimiento, seguridad y usabilidad.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROCESO DE TRABAJO MEDIANTE LISTA ORDENADA (T05: <ol>) -->
+    <section style="margin: 3.5rem 0;" aria-label="Metodología y proceso de desarrollo">
+      <div class="section-header">
+        <span class="section-tag">Flujo Metodológico</span>
+        <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+        <p>Una metodología ágil estructurada en 5 etapas secuenciales para garantizar resultados predecibles y de alto rendimiento:</p>
+      </div>
+
+      <!-- Lista Ordenada (<ol>) requerida por rúbrica (T05) -->
+      <ol class="process-list">
+        
+        <li class="process-step">
+          <div class="step-number">1</div>
+          <h4>Descubrimiento</h4>
+          <p>Relevamiento de requerimientos, análisis de procesos actuales y definición de objetivos clave del negocio.</p>
+        </li>
+
+        <li class="process-step">
+          <div class="step-number">2</div>
+          <h4>Diseño &amp; Arquitectura</h4>
+          <p>Modelado de base de datos, prototipado UX/UI y selección del stack tecnológico óptimo y escalable.</p>
+        </li>
+
+        <li class="process-step">
+          <div class="step-number">3</div>
+          <h4>Desarrollo Ágil</h4>
+          <p>Construcción modular en sprints de 2 semanas con entregas continuas y retroalimentación constante del cliente.</p>
+        </li>
+
+        <li class="process-step">
+          <div class="step-number">4</div>
+          <h4>Control de Calidad (QA)</h4>
+          <p>Pruebas funcionales automatizadas, test de carga, auditoría de código estático y verificación de seguridad.</p>
+        </li>
+
+        <li class="process-step">
+          <div class="step-number">5</div>
+          <h4>Despliegue &amp; Soporte</h4>
+          <p>Puesta en producción sin tiempo de inactividad, capacitación de usuarios y monitoreo proactivo 24/7.</p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- SECCIÓN DE VENTAJAS COMPETITIVAS -->
+    <section style="margin: 3.5rem 0 4rem;" aria-label="Ventajas competitivas de TechSolutions">
+      <div class="section-header text-center">
+        <span class="section-tag">Por Qué Elegirnos</span>
+        <h2 class="section-title text-center">Nuestras Ventajas Competitivas</h2>
+        <p style="max-width: 750px; margin: 0 auto;">Marcamos la diferencia a través de resultados comprobables y metodologías consolidadas.</p>
+      </div>
+
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <i class="fa-solid fa-certificate"></i>
+          <h4>Ingenieros Certificados</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+            El 100% de nuestros líderes técnicos cuentan con certificaciones oficiales en Cloud Architecture y DevOps.
+          </p>
+        </div>
+
+        <div class="advantage-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <h4>Velocidad de Time-to-Market</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+            Reducimos hasta un 40% los tiempos tradicionales de lanzamiento gracias a librerías propietarias y CI/CD automatizado.
+          </p>
+        </div>
+
+        <div class="advantage-item">
+          <i class="fa-solid fa-headset"></i>
+          <h4>Soporte Post-Lanzamiento</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+            Garantía extendida por escrito y mesa de ayuda con tiempos de respuesta menores a 15 minutos para incidencias críticas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (T06: POSITION FIXED)
+       ====================================================================== -->
+  <a 
+    href="https://wa.me/51999999999?text=Hola%20TechSolutions,%20deseo%20conocer%20más%20sobre%20su%20empresa%20y%20equipo" 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    title="Chatear por WhatsApp con un especialista" 
+    aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA INSTITUCIONAL (T07: FOOTER, T05: ENLACES)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        
+        <!-- Columna 1: Perfil Corporativo -->
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 1rem;">
+            <i class="fa-solid fa-microchip" style="color: var(--color-secondary);"></i>
+            <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+          </div>
+          <p>
+            Firma especializada en ingeniería de software, arquitectura cloud y ciberseguridad. Convertimos tecnología en valor medible para organizaciones de vanguardia.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Sobre Nosotros</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Tarifas y Planes</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Formulario de Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios Destacados -->
+        <div class="footer-col">
+          <h3>Soluciones</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Desarrollo Web &amp; Apps</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Arquitectura Cloud</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Auditoría de Seguridad</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Consultoría DevOps</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto Institucional -->
+        <div class="footer-col">
+          <h3>Oficina Central</h3>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            Av. Tecnológica 1024, Edificio Innova, Lima - Perú
+          </p>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-phone" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            +51 (1) 745-8900
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            contacto@techsolutions.com
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Subpie de Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 TechSolutions S.A.C. Todos los derechos reservados.</p>
+        <p>Desarrollado bajo estándares W3C Semánticos y Diseño Adaptable (HTML5 &amp; CSS3).</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

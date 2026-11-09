@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y de Codificación (T02) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Póngase en contacto con TechSolutions: Consulte nuestros planes de tarifas, solicite una cotización personalizada o visítenos en nuestras oficinas.">
+  <meta name="keywords" content="TechSolutions, contacto, cotización, tarifas de desarrollo, presupuesto de software, soporte técnico">
+  <meta name="author" content="TechSolutions Inc.">
+  
+  <title>TechSolutions | Contacto, Tarifas y Ubicación</title>
+
+  <!-- Biblioteca de Íconos Font Awesome (T04) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Hoja de Estilos Externa Única (T01 - T10) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       CABECERA Y MENÚ DE NAVEGACIÓN (T05, T06: STICKY, T07: SEMÁNTICA)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Logotipo Institucional -->
+      <a href="index.html" class="brand-logo" aria-label="Página de inicio de TechSolutions">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+      </a>
+
+      <!-- Menú de Navegación Interactivo (T05) -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="nosotros.html">
+              <i class="fa-solid fa-users"></i> Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="contacto.html" class="active">
+              <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       ENCABEZADO DE SECCIÓN / HERO
+       ====================================================================== -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="section-tag">Canales de Comunicación</span>
+      <h1 class="section-title">Inicie la Conversación con Nuestro Equipo</h1>
+      <p style="max-width: 800px; color: var(--color-text-muted); font-size: 1.1rem;">
+        Estamos listos para evaluar su próximo proyecto, despejar dudas técnicas o agendar una sesión de consultoría personalizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL (T07: MAIN, SECTION, FORMULARIO, TABLA, MAPA)
+       ====================================================================== -->
+  <main class="container">
+
+    <!-- SECCIÓN 1: DATOS DE CONTACTO Y FORMULARIO (T04, T06, T08) -->
+    <section class="contact-layout-grid" aria-label="Formulario y datos de contacto">
+      
+      <!-- Tarjeta de Información Directa -->
+      <div class="contact-info-card">
+        <div>
+          <span class="section-tag" style="color: var(--color-secondary);">Atención Personalizada</span>
+          <h2 style="font-size: 1.8rem; margin-top: 0.5rem;">Hablemos de su Próximo Salto Tecnológico</h2>
+          <p style="color: #cbd5e1; font-size: 0.98rem; margin-top: 1rem;">
+            Envíenos un mensaje y uno de nuestros arquitectos de soluciones le responderá en <span class="destacado" style="background: rgba(0, 168, 150, 0.3); color: #ffffff;">menos de 24 horas hábiles</span>.
+          </p>
+
+          <!-- Métodos de contacto directo con Font Awesome -->
+          <ul class="contact-methods">
+            <li class="contact-method-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Línea Telefónica Directa</strong>
+                <span>+51 (1) 745-8900</span>
+              </div>
+            </li>
+            <li class="contact-method-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Correo Electrónico Corporativo</strong>
+                <a href="mailto:proyectos@techsolutions.com">proyectos@techsolutions.com</a>
+              </div>
+            </li>
+            <li class="contact-method-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Sede Central de Operaciones</strong>
+                <span>Av. Tecnológica 1024, Piso 8, Centro Financiero, Lima, Perú</span>
+              </div>
+            </li>
+            <li class="contact-method-item">
+              <i class="fa-regular fa-clock"></i>
+              <div>
+                <strong>Jornada de Oficina</strong>
+                <span>Lunes a Viernes de 08:30 a 18:30 hrs</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div style="padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+          <p style="font-size: 0.88rem; color: #94a3b8; margin: 0;">
+            <i class="fa-solid fa-shield-halved" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>
+            Toda información provista está resguardada bajo estricto acuerdo de confidencialidad (NDA).
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulario de Contacto (T08: Controles input, select, textarea, label y validaciones nativas) -->
+      <div class="form-container">
+        <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">
+          <i class="fa-solid fa-paper-plane" style="color: var(--color-secondary);"></i> Envíenos su Consulta
+        </h3>
+        <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+          Complete los campos requeridos para canalizar su requerimiento al área correspondiente.
+        </p>
+
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por comunicarse con TechSolutions! Hemos recibido su consulta y un especialista lo contactará a la brevedad.');">
+          
+          <!-- Fila Nombre y Apellidos -->
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="nombres">
+                <i class="fa-solid fa-user"></i> Nombres y Apellidos *
+              </label>
+              <input 
+                type="text" 
+                id="nombres" 
+                name="nombres" 
+                class="form-control" 
+                placeholder="Ej. Carlos Mendoza" 
+                required 
+                minlength="3" 
+                maxlength="80" 
+                autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="empresa">
+                <i class="fa-solid fa-building"></i> Empresa u Organización
+              </label>
+              <input 
+                type="text" 
+                id="empresa" 
+                name="empresa" 
+                class="form-control" 
+                placeholder="Ej. Innova Tech SAC" 
+                autocomplete="organization">
+            </div>
+          </div>
+
+          <!-- Fila Correo y Teléfono -->
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="correo">
+                <i class="fa-solid fa-at"></i> Correo Electrónico *
+              </label>
+              <input 
+                type="email" 
+                id="correo" 
+                name="correo" 
+                class="form-control" 
+                placeholder="nombre@empresa.com" 
+                required 
+                autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">
+                <i class="fa-solid fa-phone"></i> Teléfono Móvil *
+              </label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                class="form-control" 
+                placeholder="Ej. 987654321" 
+                pattern="[0-9]{9,15}" 
+                title="Ingrese entre 9 y 15 dígitos numéricos" 
+                required 
+                autocomplete="tel">
+            </div>
+          </div>
+
+          <!-- Selector de Servicio (<select>) -->
+          <div class="form-group">
+            <label for="servicio">
+              <i class="fa-solid fa-list-check"></i> Servicio de Interés *
+            </label>
+            <select id="servicio" name="servicio" class="form-control" required>
+              <option value="" disabled selected>-- Seleccione una opción --</option>
+              <option value="software">Desarrollo de Software a Medida</option>
+              <option value="cloud">Cloud Computing &amp; Migración DevOps</option>
+              <option value="seguridad">Auditoría de Ciberseguridad &amp; Pentesting</option>
+              <option value="datos">Inteligencia Artificial y Analítica de Datos</option>
+              <option value="soporte">Soporte Continuo &amp; Mantenimiento IT</option>
+              <option value="otro">Otra consulta técnica</option>
+            </select>
+          </div>
+
+          <!-- Cuadro de Texto (<textarea>) -->
+          <div class="form-group">
+            <label for="mensaje">
+              <i class="fa-solid fa-comment-dots"></i> Descripción del Proyecto o Consulta *
+            </label>
+            <textarea 
+              id="mensaje" 
+              name="mensaje" 
+              class="form-control" 
+              rows="4" 
+              placeholder="Describa brevemente los objetivos, tiempos estimados o desafíos tecnológicos de su empresa..." 
+              required 
+              minlength="15"></textarea>
+          </div>
+
+          <!-- Checkbox de Políticas de Privacidad -->
+          <label class="checkbox-group">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <span>He leído y acepto la política de protección y tratamiento de datos personales *</span>
+          </label>
+
+          <!-- Botón de Envío con Efectos y Hover -->
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+          </button>
+
+        </form>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 2: TABLA DE TARIFAS Y PLANES (T08: TABLE, THEAD, TBODY) -->
+    <section class="pricing-section" aria-label="Planes y tarifas de servicios">
+      <div class="section-header text-center">
+        <span class="section-tag">Transparencia Presupuestal</span>
+        <h2 class="section-title text-center">Tabla de Tarifas y Modelos de Servicio</h2>
+        <p style="max-width: 750px; margin: 0 auto;">
+          Estructura de referencia para el dimensionamiento de proyectos tecnológicos. Valores estimados sujetos a requerimientos específicos.
+        </p>
+      </div>
+
+      <!-- Contenedor Responsive para Tabla -->
+      <div class="table-responsive" style="margin-top: 2rem;">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col"><i class="fa-solid fa-box"></i> Nivel de Plan</th>
+              <th scope="col"><i class="fa-solid fa-users"></i> Dirigido A</th>
+              <th scope="col"><i class="fa-solid fa-check-double"></i> Cobertura y Entregables</th>
+              <th scope="col"><i class="fa-solid fa-calendar-check"></i> Plazo Estimado</th>
+              <th scope="col"><i class="fa-solid fa-tags"></i> Inversión Referencial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Plan StartUp</strong><br>
+                <span class="pricing-tag">Fase Inicial</span>
+              </td>
+              <td>Emprendimientos y microempresas en etapa de validación</td>
+              <td>Sitio web profesional responsive, panel autogestionable, hosting cloud básico y certificado SSL</td>
+              <td>2 a 3 semanas</td>
+              <td><strong>$ 750 USD</strong></td>
+            </tr>
+
+            <tr style="background-color: rgba(15, 76, 129, 0.03);">
+              <td>
+                <strong>Plan Profesional</strong><br>
+                <span class="pricing-tag featured"><i class="fa-solid fa-star"></i> Recomendado</span>
+              </td>
+              <td>Pequeñas y medianas empresas (PyMEs) en crecimiento</td>
+              <td>Aplicación web a medida, base de datos relacional, integración con pasarelas de pago y soporte 8x5</td>
+              <td>4 a 8 semanas</td>
+              <td><strong>$ 2,200 USD</strong></td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Plan Enterprise</strong><br>
+                <span class="pricing-tag">Corporativo</span>
+              </td>
+              <td>Grandes corporaciones con flujos de alta concurrencia</td>
+              <td>Arquitectura en microservicios, infraestructura Multi-Cloud, auditoría de seguridad y soporte 24/7 SLA</td>
+              <td>A convenir por sprint</td>
+              <td><strong>Desde $ 4,800 USD</strong></td>
+            </tr>
+
+            <tr>
+              <td>
+                <strong>Consultoría &amp; QA</strong><br>
+                <span class="pricing-tag">Especializado</span>
+              </td>
+              <td>Equipos con software existente que requieren optimización</td>
+              <td>Diagnóstico de arquitectura, pruebas de carga, pentesting ético y plan de modernización de código</td>
+              <td>1 a 2 semanas</td>
+              <td><strong>$ 1,200 USD</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: MAPA INTERACTIVO GOOGLE MAPS (T07 & T08: IFRAME) -->
+    <section class="map-section" aria-label="Ubicación física en el mapa">
+      <div class="section-header">
+        <span class="section-tag">Localización Geográfica</span>
+        <h2 class="section-title">Encuéntrenos en el Centro Financiero</h2>
+        <p>
+          Nuestras oficinas centrales están equipadas con laboratorios de desarrollo y salas de conferencias para reuniones de trabajo con clientes.
+        </p>
+      </div>
+
+      <!-- Iframe de Google Maps -->
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.4428054948834!2d-77.03452652399238!3d-12.096924442562473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c86510d9f7ad%3A0x6b7724128eb01e4a!2sSan%20Isidro%20Financiero%2C%20Lima!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
+          title="Ubicación de las oficinas centrales de TechSolutions en Google Maps" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (T06: POSITION FIXED)
+       ====================================================================== -->
+  <a 
+    href="https://wa.me/51999999999?text=Hola%20TechSolutions,%20deseo%20solicitar%20un%20presupuesto%20o%20cotización" 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    title="Chatear por WhatsApp con un especialista" 
+    aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA INSTITUCIONAL (T07: FOOTER, T05: ENLACES)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        
+        <!-- Columna 1: Perfil Corporativo -->
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 1rem;">
+            <i class="fa-solid fa-microchip" style="color: var(--color-secondary);"></i>
+            <span>Tech<span style="color: var(--color-secondary);">Solutions</span></span>
+          </div>
+          <p>
+            Firma especializada en ingeniería de software, arquitectura cloud y ciberseguridad. Convertimos tecnología en valor medible para organizaciones de vanguardia.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Inicio</a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-angle-right"></i> Sobre Nosotros</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Tarifas y Planes</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-angle-right"></i> Formulario de Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios Destacados -->
+        <div class="footer-col">
+          <h3>Soluciones</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Desarrollo Web &amp; Apps</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Arquitectura Cloud</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Auditoría de Seguridad</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Consultoría DevOps</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto Institucional -->
+        <div class="footer-col">
+          <h3>Oficina Central</h3>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            Av. Tecnológica 1024, Edificio Innova, Lima - Perú
+          </p>
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-phone" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            +51 (1) 745-8900
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+            contacto@techsolutions.com
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Subpie de Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 TechSolutions S.A.C. Todos los derechos reservados.</p>
+        <p>Desarrollado bajo estándares W3C Semánticos y Diseño Adaptable (HTML5 &amp; CSS3).</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1238 @@
+/* ==========================================================================
+   TechSolutions - Hoja de Estilos Principal (style.css)
+   Cumplimiento de Temas T01 al T10:
+   - T01 & T10: Reseteo global, variables CSS (:root), CSS Grid, Flexbox y Media Queries.
+   - T02 & T03: Tipografía, jerarquía visual, line-height, text-align y resaltados.
+   - T04: Bordes, border-radius, box-shadow e integración de íconos.
+   - T05: Menús interactivos, hipervínculos y listas estilizadas.
+   - T06: Los 5 tipos de posicionamiento (static, relative, absolute, fixed, sticky),
+     transiciones, transform (scale, translate), opacidad y filter: grayscale().
+   - T07 & T08: Semántica, contenedores iframe, maquetación de formularios y tablas.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   T01 & T10: VARIABLES CSS (:root) Y RESETEO GLOBAL
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta de colores corporativos */
+  --color-primary: #0f4c81;        /* Azul corporativo clásico */
+  --color-primary-dark: #0a3258;   /* Azul oscuro para estados hover y contrastes */
+  --color-primary-light: #e8f1f8;  /* Azul tenue para fondos suaves */
+  --color-secondary: #00a896;      /* Turquesa tecnológico / acento secundario */
+  --color-secondary-dark: #028072; /* Turquesa oscuro */
+  --color-accent: #f39c12;         /* Naranja para llamadas a la acción y avisos */
+  --color-whatsapp: #25d366;       /* Color oficial de WhatsApp */
+  --color-whatsapp-dark: #128c7e;
+
+  /* Colores neutros y de interfaz */
+  --color-bg: #f8fafc;             /* Fondo general de la página */
+  --color-surface: #ffffff;        /* Fondo de tarjetas, tablas y contenedores */
+  --color-text: #2d3748;           /* Color principal para párrafos y lecturas */
+  --color-text-muted: #64748b;     /* Texto secundario y etiquetas auxiliares */
+  --color-heading: #1a202c;        /* Color oscuro para encabezados */
+  --color-border: #e2e8f0;         /* Bordes de tarjetas y tablas */
+  --color-border-focus: #0f4c81;   /* Borde para inputs en foco */
+
+  /* Tipografías y medidas */
+  --font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --line-height-base: 1.65;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Sombras predefinidas */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(15, 76, 129, 0.12);
+  --shadow-xl: 0 20px 35px rgba(0, 0, 0, 0.15);
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* Reseteo global de caja y márgenes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor centralizado para mantener el orden */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   T03: TIPOGRAFÍA, ENCABEZADOS Y TEXTOS RESALTADOS
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  color: var(--color-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.85rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.15rem; }
+
+p {
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: var(--line-height-base);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Resaltado requerido por rúbrica: <span class="destacado"> */
+.destacado {
+  background: linear-gradient(120deg, rgba(243, 156, 18, 0.2) 0%, rgba(243, 156, 18, 0.35) 100%);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: #b76e00;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   T06: DEMOSTRACIÓN DE LOS 5 TIPOS DE POSICIONAMIENTO CSS
+   1. static: Flujo natural del documento (declarado explícitamente).
+   2. relative: Contenedores con referencia de posicionamiento.
+   3. absolute: Insignias, etiquetas y adornos anclados a ancestros relativos.
+   4. fixed: Botón flotante permanente en la ventana (WhatsApp).
+   5. sticky: Cabecera principal y barra lateral que se fija al hacer scroll.
+   -------------------------------------------------------------------------- */
+
+/* 1. Posicionamiento STATIC (T06) */
+.pos-static-demo {
+  position: static;
+  background-color: var(--color-primary-light);
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--color-primary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* 2. Posicionamiento RELATIVE (T06) */
+.pos-relative-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3. Posicionamiento ABSOLUTE (T06) */
+.badge-absolute {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+/* 4. Posicionamiento FIXED (T06): Botón Flotante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform var(--transition-normal), background-color var(--transition-fast), box-shadow var(--transition-normal);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: var(--color-whatsapp-dark);
+  color: #ffffff;
+  /* Transformaciones combinadas scale y translate */
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float:focus {
+  outline: 3px solid #1ebe5d;
+  outline-offset: 3px;
+}
+
+/* 5. Posicionamiento STICKY (T06): Cabecera y Barra Lateral */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+/* --------------------------------------------------------------------------
+   CABECERA (<header>) Y NAVEGACIÓN (<nav>) - T05 & T07
+   -------------------------------------------------------------------------- */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.brand-logo i {
+  color: var(--color-secondary);
+  font-size: 1.6rem;
+}
+
+.brand-logo span {
+  color: var(--color-heading);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.main-nav a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.main-nav a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Clase de enlace activo */
+.main-nav a.active {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.main-nav a.active:hover {
+  color: #ffffff;
+  background-color: var(--color-primary-dark);
+}
+
+/* --------------------------------------------------------------------------
+   T04 & T06: BOTONES Y ELEMENTOS DE ACCIÓN
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:focus {
+  outline: 3px solid rgba(15, 76, 129, 0.4);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   PÁGINA PRINCIPAL (index.html) - ESTRUCTURA Y COMPONENTES
+   -------------------------------------------------------------------------- */
+/* Banner Principal (Hero Section) */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #0a2540 0%, #0f4c81 70%, #00a896 100%);
+  color: #ffffff;
+  padding: 4.5rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  color: #ffffff;
+  font-size: 2.85rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Disposición general en Grid con barra lateral (<aside>) */
+.main-layout-grid {
+  display: grid;
+  grid-template-columns: 2.6fr 1fr;
+  gap: 2.5rem;
+  margin: 3.5rem 0;
+  align-items: start;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Cuadrícula de Servicios (CSS Grid) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Tarjetas de Servicios (<article>) con bordes, sombras y transformaciones */
+.service-card {
+  position: relative; /* Para posición del badge */
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(15, 76, 129, 0.3);
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+/* Barra Lateral (<aside>) */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.sidebar-widget {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-widget h3 {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-primary-light);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.sidebar-news-list {
+  list-style: none;
+}
+
+.sidebar-news-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+}
+
+.sidebar-news-list li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-news-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.sidebar-news-list a:hover {
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+/* Sección Multimedia: Contenedor Adaptable para Iframe de YouTube (T07 & T08) */
+.media-section {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin: 3rem 0;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.video-responsive-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  background-color: #000000;
+}
+
+.video-responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   PÁGINA INSTITUCIONAL (nosotros.html) - HISTORIA, VALORES, PROCESO
+   -------------------------------------------------------------------------- */
+.about-hero {
+  background-color: #ffffff;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+/* Imagen institucional con efecto de filtro grayscale (T06) */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #ffffff;
+}
+
+.img-institucional {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  /* Filtro de escala de grises con transición hacia color completo en hover */
+  filter: grayscale(85%);
+  transition: filter var(--transition-slow), transform var(--transition-slow);
+}
+
+.image-wrapper:hover .img-institucional {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10, 37, 64, 0.9), transparent);
+  color: #ffffff;
+  padding: 1.5rem 1rem 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Sección Misión y Visión (Flexbox / Grid) */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.mv-card {
+  background-color: var(--color-surface);
+  padding: 2.2rem;
+  border-radius: var(--radius-md);
+  border-left: 5px solid var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.mv-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* Listas ordenadas y desordenadas (T05) */
+.values-list {
+  list-style: none; /* Personalización con íconos */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.values-list li {
+  background-color: var(--color-surface);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.values-list li:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-secondary);
+}
+
+.values-list li i {
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+/* Lista ordenada estilizada para proceso de trabajo (<ol>) */
+.process-list {
+  list-style: none;
+  counter-reset: step-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.process-step {
+  counter-increment: step-counter;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.25rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.process-step h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+/* Ventajas Competitivas */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.advantage-item {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.advantage-item i {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   PÁGINA DE CONTACTO (contacto.html) - FORMULARIOS, TABLAS Y MAPA (T08)
+   -------------------------------------------------------------------------- */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 2.5rem;
+  margin: 3.5rem 0;
+}
+
+/* Información de Contacto Directo */
+.contact-info-card {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info-card h2,
+.contact-info-card h3 {
+  color: #ffffff;
+}
+
+.contact-methods {
+  list-style: none;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.contact-method-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-method-item i {
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.contact-method-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.contact-method-item span,
+.contact-method-item a {
+  color: #ffffff;
+  font-size: 0.98rem;
+}
+
+.contact-method-item a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* Formulario de Contacto (T04, T06, T08) */
+.form-container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Inputs, Selects y Textarea con :focus y validaciones */
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #fcfdfe;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.15);
+}
+
+/* Feedback visual sutil al escribir */
+.form-control:valid {
+  border-color: #cbd5e1;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Tabla de Tarifas Estructurada (T08) */
+.pricing-section {
+  margin: 4rem 0;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.pricing-table thead {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.pricing-table th {
+  padding: 1.15rem 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--color-primary-dark);
+}
+
+.pricing-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+/* Efecto cebra y hover en filas de tabla */
+.pricing-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.pricing-table tbody tr:hover {
+  background-color: var(--color-primary-light);
+  transition: background-color var(--transition-fast);
+}
+
+.pricing-tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  background-color: rgba(0, 168, 150, 0.15);
+  color: var(--color-secondary-dark);
+}
+
+.pricing-tag.featured {
+  background-color: rgba(243, 156, 18, 0.2);
+  color: #b76e00;
+}
+
+/* Mapa Interactivo Google Maps (T07 & T08) */
+.map-section {
+  margin: 3.5rem 0 2rem;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   PIE DE PÁGINA (<footer>) - T05 & T07
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #0b192c;
+  color: #cbd5e1;
+  margin-top: auto;
+  border-top: 4px solid var(--color-primary);
+}
+
+.footer-top {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 3px;
+  background-color: var(--color-secondary);
+}
+
+.footer-col p {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-secondary);
+  transform: translateX(4px);
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-bottom {
+  background-color: #060e18;
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   T01 & T10: ADAPTACIÓN MÓVIL Y MEDIA QUERIES (@media (max-width: 768px))
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Cabecera y Menú Móvil */
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .main-nav a {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Reducción de fuentes para móviles */
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.25rem; }
+
+  .hero-section {
+    padding: 3rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  /* Colapso de Grids a 1 Columna en Pantallas Pequeñas */
+  .main-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Ajuste de posición de sidebar */
+  .sticky-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
